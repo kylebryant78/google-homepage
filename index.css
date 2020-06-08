@@ -1,0 +1,117 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* navbar left below */
+.navbar_left ul {
+    list-style-type: none;
+    margin:0;
+    padding-top: 15px;
+    padding-left: 0px;
+}
+.navbar_left li{
+    display: inline-block;
+}
+.navbar_left li a{
+    text-decoration: none;
+    color: black;
+    font-size: 13px;
+}
+.navbar_left li a:hover {
+    text-decoration: underline;
+}
+/*navbar right */
+.navbar_right ul {
+    list-style-type: none;
+    margin:0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+.navbar_right li a{
+    text-decoration: none;
+    color: black;
+    font-size: 13px;    
+}
+.navbar_right li a:hover {
+    text-decoration: underline;
+}
+/* each link individually */
+#apps_img {
+    width: 30px;
+    height: 30px;
+}
+#about {
+    padding-right: 10px;
+    padding-left: 15px;
+}
+#store {
+    padding-right: 80vw;
+    padding-left: 10px;
+}
+#spacer {
+    order: 1;
+    width: 50vw;
+}
+#gmail {
+    padding-right: 10px;
+    order: 2;
+    padding-right: 25px;
+}
+#images {
+    order: 3;
+    padding-right: 25px;
+}
+#apps {
+    order: 4;
+    padding-right: 25px;
+}
+#sign_in {
+    padding-right: 20px;
+    order: 5;
+}
+#sign_in_button a{
+    color:white;
+    font-weight: bold;    
+}
+#sign_in_button {
+    background-color: #4285f4;
+    border: 1px solid #4285f4;
+    height: 30px;
+    width: 70px;
+}
+/* below is the center of the page */
+.logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 15%;
+    padding-bottom: 1em;
+    padding-top: 1em;
+}
+.search_bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-bottom: 1em;
+    padding-top: 6px; 
+      
+}
+.search_bar input{
+    width: 40em;
+    border-radius: 100px;
+    height: 35px;
+    border-color: #f8f8f8;
+}
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 1em;    
+    
+}
+.search_button {
+    padding-right: 15px;
+    background-color: #f8f8f8;
+}
+
