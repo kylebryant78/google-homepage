@@ -1,57 +1,44 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
 }
-
-/* navbar left below */
-.navbar_left ul {
-    list-style-type: none;
-    margin:0;
-    padding-top: 15px;
-    padding-left: 0px;
-}
-.navbar_left li{
-    display: inline-block;
-}
-.navbar_left li a{
-    text-decoration: none;
-    color: black;
-    font-size: 13px;
-}
-.navbar_left li a:hover {
-    text-decoration: underline;
-}
-/*navbar right */
-.navbar_right ul {
-    list-style-type: none;
-    margin:0;
-    padding: 0;
+/* working navbar */
+.navbar_total {
     display: flex;
-    justify-content: flex-end;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
 }
-.navbar_right li a{
+.navbar_total ul {
+    display: flex;
+    list-style-type: none;
+    font-size: 13px;
+    align-items: center;
+}
+.navbar_total ul a{
     text-decoration: none;
-    color: black;
-    font-size: 13px;    
+    color: #5c5c5c;
 }
-.navbar_right li a:hover {
+.navbar_total ul a:hover {
     text-decoration: underline;
 }
-/* each link individually */
+.navbar_left {
+    flex-shrink: 1;
+}
+.navbar_right {
+    flex-shrink: 1;
+}
+/* each nav bar link individually */
 #apps_img {
     width: 30px;
     height: 30px;
 }
 #about {
     padding-right: 10px;
-    padding-left: 15px;
 }
 #store {
-    padding-right: 80vw;
+    /*padding-right: 80vw;*/
     padding-left: 10px;
-}
-#spacer {
-    order: 1;
-    width: 50vw;
 }
 #gmail {
     padding-right: 10px;
@@ -65,6 +52,12 @@ body {
 #apps {
     order: 4;
     padding-right: 25px;
+}
+#apps img {
+    opacity: 65%;
+}
+#apps img:hover {
+    opacity: 100%;
 }
 #sign_in {
     padding-right: 20px;
@@ -80,38 +73,175 @@ body {
     height: 30px;
     width: 70px;
 }
+#sign_in_button a:hover {
+    text-decoration: none;    
+}
+#sign_in_button:hover {
+    box-shadow: 0 1px 0 #357df1;
+}
 /* below is the center of the page */
+/* the logo */
 .logo {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin-top: 15%;
+    margin-top: 5%;
     padding-bottom: 1em;
     padding-top: 1em;
 }
+/* the search bar */
 .search_bar {
     display: flex;
     flex-direction: row;
     justify-content: center;
     padding-bottom: 1em;
     padding-top: 6px; 
-      
-}
+} /*adds the magnifying glass image and changes the padding of where the text
+starts in the search bar amongst the other things */
 .search_bar input{
     width: 40em;
     border-radius: 100px;
-    height: 35px;
-    border-color: #f8f8f8;
+    border: 1px solid #dfe1e5;
+    height: 44px;
+    padding-left: 50px;
+    background-image: url(https://cdn2.iconfinder.com/data/icons/ios-7-icons/50/search-512.png);
+    background-size: 17px;
+    background-repeat: no-repeat;
+    background-position: 4% 50%;
+    font-size: 13px;
+} /* on hover and focus adds a shadow around the search bar */
+.search_bar input:hover {
+    box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28);
+}
+.search_bar input:focus {
+    box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28);
 }
 .buttons {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    padding-top: 1em;    
-    
+    padding-top: 1em;
 }
 .search_button {
     padding-right: 15px;
-    background-color: #f8f8f8;
+}
+.search_button input {
+    background-color: #f2f2f2;
+    height: 35px;
+    width: 125px;
+    cursor: pointer;
+    border: 1px solid #e9e9e9;
+    border-radius: 4px;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #5c5c5c;
+}
+.lucky_button input{
+    background-color: #f2f2f2;
+    height: 35px;
+    width: 145px;
+    cursor: pointer;
+    border: 1px solid #e9e9e9;
+    border-radius: 4px;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #5c5c5c;
+}
+.search_button input:hover {
+    border: 1px solid rgb(168, 168, 168);
+    border-radius: 4px;
+    box-shadow: 0 1px 2px rgb(168, 168, 168);
+}
+.lucky_button:hover {
+    border: 1px solid rgb(168, 168, 168);
+    border-radius: 4px;
+    box-shadow: 0 1px 2px rgb(168, 168, 168);
+}
+/* footer below */
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 405px;
+    background-color: #ececec;
+    border-top: 1px solid #d8d6d6;
+    position: fixed;
+    left:0;
+    bottom: 0;
+    width: 100%;
+}
+.footer ul {
+    list-style-type: none;
+    display: flex;
+    font-size: 15px;
+}
+.footer ul a{
+    text-decoration: none;
+    color: #5f6368;
+}
+.footer ul a:hover{
+    text-decoration: underline;
+}
+.footer_left li{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.footer_right li {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+#advertising {
+    margin-left:0px;
+}
+#settings {
+    padding-right: 10px;
 }
 
+/* when the screen is less than 700px removes the top and bottom bars
+but leaves the logo and search bar/buttons */
+@media screen and (max-width: 700px) {
+    .center {
+        visibility: visible;
+    }
+    .navbar_total {
+        visibility: hidden;
+    }
+    .footer{
+        visibility: hidden;
+    }
+}
+/* the nav bar is broken so leaving here as backup
+ navbar left below 
+.navbar_left ul {
+    list-style-type: none;
+    margin:0;
+    padding-top: 15px;
+    padding-left: 0px;
+}
+.navbar_left li{
+    display: inline-block;
+}
+.navbar_left li a{
+    text-decoration: none;
+    color: rgba(0,0,0,0.87);
+    font-size: 13px;
+}
+.navbar_left li a:hover {
+    text-decoration: underline;
+}
+nav bar right
+.navbar_right ul {
+    list-style-type: none;
+    margin:0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+.navbar_right li a{
+    text-decoration: none;
+    color: rgba(0,0,0,0.87);
+    font-size: 13px;    
+}
+.navbar_right li a:hover {
+    text-decoration: underline;
+} */
